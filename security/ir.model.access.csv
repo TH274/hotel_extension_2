@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_other_hotel_service_line_employee,access.other.hotel.service.line.employee,model_other_hotel_service_line,hotel_management.group_hotel_employee,1,1,1,1
+access_other_hotel_service_line_manager,access.other.hotel.service.line.manager,model_other_hotel_service_line,hotel_management.group_hotel_manager,1,1,1,1
+access_other_hotel_service_line_admin,access.other.hotel.service.line.admin,model_other_hotel_service_line,hotel_management.group_hotel_admin,1,1,1,1
+
+access_hotel_pos_line_employee,access.hotel.pos.line.employee,model_hotel_pos_line,hotel_management.group_hotel_employee,1,1,1,1
+access_hotel_pos_line_manager,access.hotel.pos.line.manager,model_hotel_pos_line,hotel_management.group_hotel_manager,1,1,1,1
+access_hotel_pos_line_admin,access.hotel.pos.line.admin,model_hotel_pos_line,hotel_management.group_hotel_admin,1,1,1,1
+
+access_add_pos_product_wizard_employee,access.add.pos.product.wizard.employee,model_add_pos_product_wizard,hotel_management.group_hotel_employee,1,1,1,1
+access_add_pos_product_wizard_manager,access.add.pos.product.wizard.manager,model_add_pos_product_wizard,hotel_management.group_hotel_manager,1,1,1,1
+access_add_pos_product_wizard_admin,access.add.pos.product.wizard.admin,model_add_pos_product_wizard,hotel_management.group_hotel_admin,1,1,1,1

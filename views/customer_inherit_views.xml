@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Inherit Hotel Customer Form View to Add "Other Services" Tab -->
+    <record id="view_hotel_customer_form_inherit_other_services" model="ir.ui.view">
+        <field name="name">hotel.customer.form.inherit</field>
+        <field name="model">hotel.customer</field>
+        <field name="inherit_id" ref="hotel_management.view_hotel_customer_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Other Services">
+                    <field name="other_service_line_ids" widget="one2many_list"
+                        string="Other Services"
+                        invisible="not status in ('checkout', 'done', 'cancelled')">
+                        <tree editable="bottom">
+                            <field name="product_id" />
+                            <field name="description" />
+                            <field name="quantity" />
+                            <field name="price_unit" />
+                            <field name="total_cost" readonly="1" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hotel_customer_form_inherit_pos_services" model="ir.ui.view">
+        <field name="name">hotel.customer.form.inherit</field>
+        <field name="model">hotel.customer</field>
+        <field name="inherit_id" ref="hotel_management.view_hotel_customer_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="POS Products">
+                    <field name="pos_line_ids" widget="one2many_list">
+                        <tree editable="bottom">
+                            <field name="product_id" domain="[('available_in_pos', '=', True)]" />
+                            <field name="quantity"/>
+                            <field name="price_unit"/>
+                            <field name="total_cost"/>
+                        </tree>
+                    </field>
+                    <button name="action_add_pos_product" string="Add POS Product" type="object" class="oe_highlight"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_hotel_room_form_inherit" model="ir.ui.view">
+        <field name="name">hotel.room.form.inherit</field>
+        <field name="model">hotel.room</field>
+        <field name="inherit_id" ref="hotel_management.view_hotel_room_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price']" position="after">
+                <field name="weekend_price" readonly="True" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hotel_room_tree_inherit" model="ir.ui.view">
+        <field name="name">hotel.room.tree.inherit</field>
+        <field name="model">hotel.room</field>
+        <field name="inherit_id" ref="hotel_management.view_hotel_room_tree" />
+        <field name="arch" type="xml">
+            <field name="price" position="after">
+                <field name="weekend_price" optional="hide" />
+            </field>
+        </field>
+    </record>
+</odoo>

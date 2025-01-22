@@ -27,7 +27,7 @@ class HotelServiceLine(models.Model):
         help="Select an existing service product."
     )
     description = fields.Char(string="Description")
-    quantity = fields.Float(string="Quantity", default=1.0, required=True)
+    quantity = fields.Float(string="duration", default=1.0, required=True)
     price_unit = fields.Float(string="Unit Price")
     total_cost = fields.Float(string="Total Cost", compute="_compute_total_cost", store=True)
 

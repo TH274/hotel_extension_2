@@ -35,17 +35,18 @@ class HotelCustomer(models.Model):
         help="List of POS products added to the customer's bill."
     )
 
-    @api.depends('room_id.price', 'check_in_date', 'check_out_date', 'service_line_ids.total_cost', 'pos_line_ids.total_cost')
+    @api.depends('room_id.price', 'check_in_date', 'check_out_date', 'service_line_ids.total_cost', 'pos_line_ids.total_cost', 'other_service_line_ids.total_cost')
     def _compute_total_amount(self):
         for record in self:
             total_service_cost = sum(service.total_cost for service in record.service_line_ids)
+            total_other_service_cost = sum(other_service.total_cost for other_service in record.other_service_line_ids)
             total_pos_cost = sum(pos.total_cost for pos in record.pos_line_ids)
             room_cost = 0
             if record.check_in_date and record.check_out_date and record.room_id:
                 duration = (record.check_out_date - record.check_in_date).days
                 room_cost = duration * record.room_id.price
 
-            record.total_amount = room_cost + total_service_cost + total_pos_cost
+            record.total_amount = room_cost + total_service_cost + total_other_service_cost + total_pos_cost
 
 class ProductProduct(models.Model):
     _inherit = 'product.product'

@@ -9,8 +9,7 @@
             <xpath expr="//notebook" position="inside">
                 <page string="Other Services">
                     <field name="other_service_line_ids" widget="one2many_list"
-                        string="Other Services"
-                        invisible="not status in ('checkout', 'done', 'cancelled')">
+                        string="Other Services">
                         <tree editable="bottom">
                             <field name="product_id" />
                             <field name="description" />

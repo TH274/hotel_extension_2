@@ -10,7 +10,3 @@ access_hotel_pos_line_admin,access.hotel.pos.line.admin,model_hotel_pos_line,hot
 access_add_pos_product_wizard_employee,access.add.pos.product.wizard.employee,model_add_pos_product_wizard,hotel_management.group_hotel_employee,1,1,1,1
 access_add_pos_product_wizard_manager,access.add.pos.product.wizard.manager,model_add_pos_product_wizard,hotel_management.group_hotel_manager,1,1,1,1
 access_add_pos_product_wizard_admin,access.add.pos.product.wizard.admin,model_add_pos_product_wizard,hotel_management.group_hotel_admin,1,1,1,1
-
-access_hotel_checkout_wizard_enhanced_employee,access.hotel.checkout.wizard.enhanced.employee,model_hotel_checkout_wizard_enhanced,hotel_management.group_hotel_employee,1,1,1,1
-access_hotel_checkout_wizard_enhanced_manager,access.hotel.checkout.wizard.enhanced.manager,model_hotel_checkout_wizard_enhanced,hotel_management.group_hotel_manager,1,1,1,1
-access_hotel_checkout_wizard_enhanced_admin,access.hotel.checkout.wizard.enhanced.admin,model_hotel_checkout_wizard_enhanced,hotel_management.group_hotel_admin,1,1,1,1
